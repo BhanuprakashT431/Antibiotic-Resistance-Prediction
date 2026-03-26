@@ -1,0 +1,4 @@
+src/App.tsx(7,43): error TS1484: 'PredictRequest' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/App.tsx(7,59): error TS1484: 'PredictResponse' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/App.tsx(7,76): error TS1484: 'AnalyticsResponse' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/App.tsx(272,58): error TS6133: 'entry' is declared but its value is never read.
