@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Use the local backend for testing, or uncomment the deployed URL for production
-const API_BASE_URL = "https://antibiotic-resistance-prediction.onrender.com";
+// Added /api to the end of the URL
+const API_BASE_URL = "https://antibiotic-resistance-prediction.onrender.com/api";
 
 
 export interface PredictRequest {
@@ -25,11 +25,13 @@ export interface AnalyticsResponse {
 }
 
 export const fetchPrediction = async (data: PredictRequest): Promise<PredictResponse> => {
+    // This now correctly calls https://...onrender.com/api/predict
     const response = await axios.post(`${API_BASE_URL}/predict`, data);
     return response.data;
 }
 
 export const fetchAnalytics = async (species: string): Promise<AnalyticsResponse> => {
+    // This now correctly calls https://...onrender.com/api/analytics
     const response = await axios.get(`${API_BASE_URL}/analytics`, { params: { species } });
     return response.data;
 }
