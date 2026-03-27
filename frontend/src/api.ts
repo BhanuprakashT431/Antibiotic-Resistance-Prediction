@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use the local backend for testing, or uncomment the deployed URL for production
-const API_BASE_URL = "https://antibiotic-resistance-prediction.onrender.com/";
+const API_BASE_URL = "https://antibiotic-resistance-prediction.onrender.com";
 
 
 export interface PredictRequest {
